@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 98%; /* #fafafa */
+  --foreground: 0 0% 15%; /* #262626 */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 15%;
+  --primary: 212 100% 24%; /* Navy #003b87 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 154 43% 18%; /* Dark Green #1b4332 */
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 28 100% 50%; /* Saffron #ff7f00 */
+  --accent-foreground: 0 0% 100%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 212 100% 24%;
+  --radius: 2px;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-[#f26d21] text-white font-medium text-sm px-5 py-2.5 border border-transparent rounded-sm cursor-pointer transition-colors;
+  }
+  .btn-primary:hover {
+    @apply bg-[#e55a10];
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center border border-gray-300 bg-transparent text-gray-700 font-medium text-sm px-5 py-2.5 rounded-sm cursor-pointer transition-colors;
+  }
+  .btn-outline:hover {
+    @apply bg-gray-50 border-gray-400 text-gray-900;
+  }
+  .card-base {
+    @apply bg-white border border-gray-200 p-5 rounded-sm;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-200 bg-white text-sm focus:outline-none focus:border-[#003b87] rounded-sm transition-colors focus:ring-1 focus:ring-[#003b87]/20;
+  }
+  .badge-high { @apply bg-red-50 text-red-700 border border-red-100 px-2 py-0.5 text-[11px] font-medium uppercase rounded-sm; }
+  .badge-critical { @apply bg-red-600 text-white border border-red-700 px-2 py-0.5 text-[11px] font-medium uppercase rounded-sm; }
+  .badge-moderate { @apply bg-amber-50 text-amber-700 border border-amber-100 px-2 py-0.5 text-[11px] font-medium uppercase rounded-sm; }
+  .badge-info { @apply bg-blue-50 text-blue-700 border border-blue-100 px-2 py-0.5 text-[11px] font-medium uppercase rounded-sm; }
+}
+
+.hero-bg {
+  background-color: #003b87;
+}
+
+.metric-label {
+  @apply text-xs uppercase tracking-wider font-bold text-gray-500 mt-1;
+}
+
+.status-badge {
+  @apply px-2 py-0.5 border text-[11px] font-bold uppercase;
+}
+
+img { max-width: 100%; height: auto; }
