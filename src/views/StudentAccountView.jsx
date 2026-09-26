@@ -13,7 +13,7 @@ export default function StudentAccountView() {
           RS
         </div>
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-2xl font-bold text-gray-800">Dr. Rajiv Sharma</h1>
+          <h1 className="text-2xl font-bold text-gray-800">Raghav Sharma</h1>
           <p className="text-sm font-bold text-secondary uppercase tracking-wide mt-1">Faculty Mentor / Lead Researcher</p>
           <p className="text-sm text-gray-600 mt-1">BIT Mesra, Ranchi • Environmental Engineering Dept.</p>
         </div>

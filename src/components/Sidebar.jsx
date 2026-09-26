@@ -67,7 +67,7 @@ export default function Sidebar({ currentPath, onNavigate, currentUser, activeRo
             />
             {!collapsed && (
               <div>
-                <span className="font-bold text-sm text-foreground leading-tight block">Nav Nirmarn</span>
+                <span className="font-bold text-sm text-foreground leading-tight block">NavNirmaan</span>
                 <span className="text-xs text-muted-foreground leading-tight block">Jharkhand Innovation</span>
               </div>
             )}

@@ -31,7 +31,7 @@ export default function StudentRecommendedView({ challenges }) {
       {/* Tags System Section */}
       <div className="bg-white p-6 border border-gray-200 shadow-sm">
         <h2 className="text-xl font-bold text-secondary uppercase tracking-wide mb-1">AI-Recommended Challenges</h2>
-        <p className="text-sm text-gray-600 mb-6">Nav Nirmarn matches you with real-world problems based on your expertise tags.</p>
+        <p className="text-sm text-gray-600 mb-6">NavNirmaan matches you with real-world problems based on your expertise tags.</p>
         
         <div className="flex flex-col md:flex-row gap-4 items-start md:items-center border-t border-gray-200 pt-4">
           <span className="text-sm font-bold text-gray-800 shrink-0">Your Expertise Tags:</span>

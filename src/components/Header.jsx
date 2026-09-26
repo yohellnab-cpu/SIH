@@ -20,7 +20,7 @@ export default function Header({ onNavigate, isScrolled }) {
               className="w-19 h-12 object-contain"
             />
             <div className="flex flex-col">
-              <span className="font-bold text-secondary text-xl leading-tight">Nav Nirmarn</span>
+              <span className="font-bold text-secondary text-xl leading-tight">NavNirmaan</span>
               <span className="font-bold text-secondary text-xl leading-tight">Portal</span>
             </div>
             <img 

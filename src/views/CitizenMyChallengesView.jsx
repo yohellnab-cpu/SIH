@@ -14,7 +14,7 @@ export default function CitizenMyChallengesView({ challenges }) {
     <div className="max-w-6xl mx-auto space-y-6">
       <div className="bg-white p-6 border border-gray-200 shadow-sm">
         <h2 className="text-xl font-bold text-secondary uppercase tracking-wide mb-2">My Submitted Challenges</h2>
-        <p className="text-sm text-gray-600 mb-6">Track the progress of the issues you have reported to Nav Nirmarn.</p>
+        <p className="text-sm text-gray-600 mb-6">Track the progress of the issues you have reported to NavNirmaan.</p>
         
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">

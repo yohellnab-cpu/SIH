@@ -81,7 +81,7 @@ export default function StudentDashboardView({ challenges, onNavigate }) {
               University Portal
             </span>
           </div>
-          <h1 className="text-2xl font-bold text-foreground">Dr. Rajiv Sharma</h1>
+          <h1 className="text-2xl font-bold text-foreground">Raghav Sharma</h1>
           <p className="text-muted-foreground text-sm flex items-center gap-1.5 mt-1">
             <MapPin className="w-3.5 h-3.5" /> BIT Mesra, Ranchi
             <span className="mx-1 text-border">·</span>

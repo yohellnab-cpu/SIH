@@ -56,16 +56,16 @@ export default function LandingView({ onNavigate }) {
       <section className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row gap-8 items-center">
           <div className="flex-1">
-            <h2 className="text-2xl font-bold text-secondary mb-4 uppercase tracking-wide">About Nav Nirmarn</h2>
+            <h2 className="text-2xl font-bold text-secondary mb-4 uppercase tracking-wide">About NavNirmaan</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Nav Nirmarn is a flagship initiative by the Government of Jharkhand aimed at crowdsourcing societal challenges directly from citizens and local administrations, and matching them with technical expertise from engineering institutes, universities, and industry partners.
+              NavNirmaan is a flagship initiative by the Government of Jharkhand aimed at crowdsourcing societal challenges directly from citizens and local administrations, and matching them with technical expertise from engineering institutes, universities, and industry partners.
             </p>
             <p className="text-gray-700 leading-relaxed">
               By creating a unified digital platform, we bridge the gap between real-world problems and academic/industrial innovation, fostering a culture of practical problem-solving and rapid deployment of technology for public good.
             </p>
           </div>
           <div className="flex-1  flex flex-col items-center text-center">
-             <img src="/assets/images/app_logo.png" alt="Nav Nirmarn Logo" className="w-24 h-24 mb-4 object-contain mix-blend-multiply" />
+             <img src="/assets/images/app_logo.png" alt="NavNirmaan Logo" className="w-24 h-24 mb-4 object-contain mix-blend-multiply" />
              <h3 className="font-bold text-primary text-lg">Department of Innovation & IT</h3>
              <p className="text-sm text-gray-600 mt-2">Government of Jharkhand</p>
           </div>

@@ -21,18 +21,18 @@ export default function AboutUsView({ onNavigate }) {
       <div className="bg-secondary py-12 border-b border-accent/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-4xl font-bold text-white uppercase tracking-wider mb-2">About Us</h1>
-          <p className="text-gray-200 text-sm font-medium">Nav Nirmarn - Department of Innovation & IT, Government of Jharkhand</p>
+          <p className="text-gray-200 text-sm font-medium">NavNirmaan - Department of Innovation & IT, Government of Jharkhand</p>
         </div>
       </div>
 
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12 w-full">
         
-        {/* About Nav Nirmarn */}
+        {/* About NavNirmaan */}
         <section className="bg-white p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8 items-start">
           <div className="flex-1">
-            <h2 className="text-2xl font-bold text-primary uppercase tracking-wide mb-4 border-b border-gray-200 pb-2">About Nav Nirmarn</h2>
+            <h2 className="text-2xl font-bold text-primary uppercase tracking-wide mb-4 border-b border-gray-200 pb-2">About NavNirmaan</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Nav Nirmarn is a flagship initiative by the Government of Jharkhand aimed at crowdsourcing societal challenges directly from citizens and local administrations, and matching them with technical expertise from engineering institutes, universities, and industry partners.
+              NavNirmaan is a flagship initiative by the Government of Jharkhand aimed at crowdsourcing societal challenges directly from citizens and local administrations, and matching them with technical expertise from engineering institutes, universities, and industry partners.
             </p>
             <p className="text-gray-700 leading-relaxed">
               By creating a unified digital platform, we bridge the gap between real-world problems and academic/industrial innovation, fostering a culture of practical problem-solving and rapid deployment of technology for public good.
