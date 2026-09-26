@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { successStoriesData as stories } from '../data/successStoriesData';
 
 export default function SuccessStoriesView({ onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,49 +13,6 @@ export default function SuccessStoriesView({ onNavigate }) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const stories = [
-    {
-      id: 1,
-      name: "Solar-Powered Cold Storage Unit",
-      challenge: "High spoilage of tomato yields in Ranchi district due to lack of electricity.",
-      solution: "A low-cost, off-grid solar cold storage unit built with locally sourced insulation materials.",
-      domain: "Agriculture",
-      team: "BIT Mesra (Dept. of Mechanical Engineering)",
-      impact: "Reduced post-harvest losses by 40% for 200+ local farmers.",
-      statusColor: "bg-green-100 text-green-800 border-green-300"
-    },
-    {
-      id: 2,
-      name: "AI-Based Anemia Screening Tool",
-      challenge: "ASHA workers lacked non-invasive tools to screen for anemia in remote tribal blocks.",
-      solution: "A smartphone application that analyzes conjunctiva images to estimate hemoglobin levels.",
-      domain: "Healthcare",
-      team: "NIT Jamshedpur (AI Research Lab)",
-      impact: "Screened 5,000+ women across Khunti block with 88% accuracy.",
-      statusColor: "bg-green-100 text-green-800 border-green-300"
-    },
-    {
-      id: 3,
-      name: "Smart IoT Water ATM",
-      challenge: "Inequitable distribution and contamination of drinking water in rural panchayats.",
-      solution: "Automated dispensing and real-time quality monitoring systems for community water tanks.",
-      domain: "Water Resources",
-      team: "IIT (ISM) Dhanbad",
-      impact: "Ensured safe drinking water access for 3 villages (approx. 4,500 residents).",
-      statusColor: "bg-blue-100 text-blue-800 border-blue-300"
-    },
-    {
-      id: 4,
-      name: "Biodegradable Sanitary Pads Manufacturing",
-      challenge: "Lack of affordable and eco-friendly menstrual hygiene products for rural women.",
-      solution: "Establishing micro-manufacturing units using bamboo fiber and banana pulp.",
-      domain: "Women Empowerment",
-      team: "Women's College, Jamshedpur",
-      impact: "Created livelihood for 40 women and provided pads to 2,000 adolescent girls.",
-      statusColor: "bg-green-100 text-green-800 border-green-300"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background flex flex-col pt-[80px]">
@@ -108,7 +66,10 @@ export default function SuccessStoriesView({ onNavigate }) {
                     <h3 className="text-xs font-bold text-secondary uppercase tracking-wider mb-1">Measurable Impact</h3>
                     <p className="text-sm font-medium text-gray-800">{story.impact}</p>
                   </div>
-                  <button className="bg-accent hover:bg-[#e55a10] text-white font-bold text-xs uppercase tracking-wider px-6 py-2 transition-colors flex-shrink-0 whitespace-nowrap">
+                  <button 
+                    onClick={() => onNavigate(`/success-stories/${story.id}`)}
+                    className="bg-accent hover:bg-[#e55a10] text-white font-bold text-xs uppercase tracking-wider px-6 py-2 transition-colors flex-shrink-0 whitespace-nowrap"
+                  >
                     View Story &rarr;
                   </button>
                 </div>

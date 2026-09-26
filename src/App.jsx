@@ -13,6 +13,7 @@ import IndustryMentorshipView from './views/IndustryMentorshipView';
 import AboutUsView from './views/AboutUsView';
 import ChallengeDomainsView from './views/ChallengeDomainsView';
 import SuccessStoriesView from './views/SuccessStoriesView';
+import SuccessStoryDetailView from './views/SuccessStoryDetailView';
 import Sidebar from './components/Sidebar';
 import ChallengeDetailModal from './components/ChallengeDetailModal';
 import { initialChallenges, demoUsers } from './data/mockData';
@@ -74,6 +75,10 @@ export default function App() {
   if (currentPath === '/about') return <AboutUsView onNavigate={navigate} />;
   if (currentPath === '/domains') return <ChallengeDomainsView onNavigate={navigate} />;
   if (currentPath === '/success-stories') return <SuccessStoriesView onNavigate={navigate} />;
+  if (currentPath.startsWith('/success-stories/')) {
+    const storyId = currentPath.split('/')[2];
+    return <SuccessStoryDetailView id={storyId} onNavigate={navigate} />;
+  }
   if (currentPath === '/role-selection-demo-login') return <DemoLoginView onNavigate={navigate} setCurrentUser={setCurrentUser} setActiveRole={setActiveRole} />;
 
   // Citizen Routes

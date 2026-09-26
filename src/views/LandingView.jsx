@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ThematicCarousel from '../components/ThematicCarousel';
 
 export default function LandingView({ onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +23,7 @@ export default function LandingView({ onNavigate }) {
         {/* Background Image styling to match reference (a realistic village scene) */}
         <div 
           className="absolute inset-0 bg-center bg-cover opacity-80" 
-          style={{ backgroundImage: 'url(/assets/images/jj.jpg)' }}
+          style={{ backgroundImage: 'url(/assets/images/jj.jpeg)' }}
         /> 
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a120b] via-[#1a120b]/80 to-transparent"></div>
         
@@ -63,7 +64,7 @@ export default function LandingView({ onNavigate }) {
               By creating a unified digital platform, we bridge the gap between real-world problems and academic/industrial innovation, fostering a culture of practical problem-solving and rapid deployment of technology for public good.
             </p>
           </div>
-          <div className="flex-1 bg-gray-100 p-6 border border-gray-200 shadow-sm flex flex-col items-center text-center">
+          <div className="flex-1  flex flex-col items-center text-center">
              <img src="/assets/images/app_logo.png" alt="Nav Nirmarn Logo" className="w-24 h-24 mb-4 object-contain mix-blend-multiply" />
              <h3 className="font-bold text-primary text-lg">Department of Innovation & IT</h3>
              <p className="text-sm text-gray-600 mt-2">Government of Jharkhand</p>
@@ -110,29 +111,9 @@ export default function LandingView({ onNavigate }) {
 
       {/* THEMATIC DOMAINS */}
       <section className="bg-background border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <h2 className="text-xl font-bold text-gray-800 mb-4">Thematic Domains</h2>
-          <div className="flex flex-wrap gap-3">
-            {[
-              { name: "Education", icon: "📘" },
-              { name: "Healthcare", icon: "🩺" },
-              { name: "Agriculture", icon: "🚜" },
-              { name: "Water Resources", icon: "🚰" },
-              { name: "Sanitation", icon: "🗑️" },
-              { name: "Environment", icon: "🌳" },
-              { name: "Public Service Delivery", icon: "📄" },
-              { name: "Smart Mobility", icon: "🚌" },
-              { name: "Women Empowerment", icon: "👩‍💼" },
-              { name: "Tribal Development", icon: "🏘️" },
-              { name: "Disaster Management", icon: "🚨" },
-              { name: "Clean Energy", icon: "⚡" }
-            ].map(domain => (
-              <div key={domain.name} className="flex items-center gap-2 bg-[#fdfdfb] border border-gray-200 px-4 py-2 hover:bg-gray-100 cursor-pointer shadow-sm">
-                <span className="text-xl">{domain.icon}</span>
-                <span className="font-medium text-sm text-gray-800">{domain.name}</span>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-xl font-bold text-gray-800 mb-8 uppercase tracking-wide border-b border-gray-200 pb-2">Thematic Domains</h2>
+          <ThematicCarousel onNavigate={onNavigate} />
         </div>
       </section>
 
@@ -146,13 +127,16 @@ export default function LandingView({ onNavigate }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* Story 1 */}
-            <div className="bg-white border border-gray-200 shadow-sm flex flex-col">
+            <div 
+              className="bg-white border border-gray-200 shadow-sm flex flex-col cursor-pointer hover:shadow-md transition-shadow group"
+              onClick={() => onNavigate('/success-stories/1')}
+            >
               <div className="h-40 bg-gray-200 border-b border-gray-200 overflow-hidden relative">
-                 <div className="absolute inset-0 bg-primary/10"></div>
+                 <img src="/assets/images/solar-cold-storage.jpg" alt="Solar-Powered Cold Storage" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                  <div className="absolute top-2 left-2 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 uppercase border border-green-300">Deployed</div>
               </div>
-              <div className="p-4 flex-1 flex flex-col">
-                <h3 className="font-bold text-gray-800 mb-2">Solar-Powered Cold Storage for Farmers</h3>
+              <div className="p-4 flex-1 flex flex-col relative z-10 bg-white">
+                <h3 className="font-bold text-gray-800 mb-2 group-hover:text-primary transition-colors">Solar-Powered Cold Storage for Farmers</h3>
                 <p className="text-xs text-gray-600 mb-4 line-clamp-3">A low-cost solar cold storage unit developed by BIT Mesra students, successfully preserving tomato yields in Ranchi district.</p>
                 <div className="mt-auto pt-4 border-t border-gray-200 text-xs text-gray-500 font-medium">
                    Partner: Tata Steel CSR
@@ -161,9 +145,12 @@ export default function LandingView({ onNavigate }) {
             </div>
 
             {/* Story 2 */}
-            <div className="bg-white border border-gray-200 shadow-sm flex flex-col">
+            <div 
+              className="bg-white border border-gray-200 shadow-sm flex flex-col cursor-pointer hover:shadow-md transition-shadow group"
+              onClick={() => onNavigate('/success-stories/2')}
+            >
               <div className="h-40 bg-gray-200 border-b border-gray-200 overflow-hidden relative">
-                 <div className="absolute inset-0 bg-secondary/10"></div>
+                 <img src="/assets/images/ChatGPT_Image_Sep_26_2026_09_01_03_PM.png" alt="AI-based Anemia Screening" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                  <div className="absolute top-2 left-2 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 uppercase border border-green-300">Deployed</div>
               </div>
               <div className="p-4 flex-1 flex flex-col">
@@ -176,10 +163,13 @@ export default function LandingView({ onNavigate }) {
             </div>
 
             {/* Story 3 */}
-            <div className="bg-white border border-gray-200 shadow-sm flex flex-col">
+            <div 
+              className="bg-white border border-gray-200 shadow-sm flex flex-col cursor-pointer hover:shadow-md transition-shadow group"
+              onClick={() => onNavigate('/success-stories/3')}
+            >
               <div className="h-40 bg-gray-200 border-b border-gray-200 overflow-hidden relative">
-                 <div className="absolute inset-0 bg-accent/10"></div>
-                 <div className="absolute top-2 left-2 bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 uppercase border border-blue-300">Pilot Phase</div>
+                 <img src="/assets/images/ChatGPT_Image_Sep_26_2026_09_19_23_PM.png" alt="Solar-Powered Cold Storage" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                 <div className="absolute top-2 left-2 bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 uppercase border border-green-300">Deployed</div>
               </div>
               <div className="p-4 flex-1 flex flex-col">
                 <h3 className="font-bold text-gray-800 mb-2">Smart IoT Water ATM</h3>

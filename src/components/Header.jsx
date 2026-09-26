@@ -17,12 +17,21 @@ export default function Header({ onNavigate, isScrolled }) {
             <img 
               src="/assets/images/app_logo.png" 
               alt="Government Emblem" 
-              className="w-12 h-12 object-contain"
+              className="w-19 h-12 object-contain"
             />
             <div className="flex flex-col">
               <span className="font-bold text-secondary text-xl leading-tight">Nav Nirmarn</span>
               <span className="font-bold text-secondary text-xl leading-tight">Portal</span>
             </div>
+            <img 
+              src="/assets/images/emblem.png" 
+              alt="Government Emblem" 
+              className="w-12 h-12 object-contain"
+            /><img 
+              src="/assets/images/sih-removebg-preview.png" 
+              alt="Government Emblem" 
+              className="w-12 h-12 object-contain"
+            />
           </div>
 
           {/* Desktop Navigation */}

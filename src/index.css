@@ -30,7 +30,17 @@
 }
 
 body {
-  background-color: hsl(var(--background));
+  background-color: #f8f9fa;
+  background-image: 
+    linear-gradient(135deg, transparent 20%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.8) 50%, transparent 50%),
+    linear-gradient(135deg, transparent 10%, rgba(0, 59, 135, 0.04) 10%, rgba(0, 59, 135, 0.04) 25%, transparent 25%),
+    linear-gradient(135deg, transparent 60%, rgba(255, 127, 0, 0.04) 60%, rgba(255, 127, 0, 0.04) 75%, transparent 75%),
+    linear-gradient(45deg, transparent 30%, rgba(27, 67, 50, 0.03) 30%, rgba(27, 67, 50, 0.03) 45%, transparent 45%),
+    linear-gradient(135deg, transparent 24.9%, rgba(0, 59, 135, 0.1) 24.9%, rgba(0, 59, 135, 0.1) 25.1%, transparent 25.1%),
+    linear-gradient(135deg, transparent 59.9%, rgba(255, 127, 0, 0.1) 59.9%, rgba(255, 127, 0, 0.1) 60.1%, transparent 60.1%);
+  background-size: 2000px 2000px;
+  background-attachment: fixed;
+  background-position: center;
   color: hsl(var(--foreground));
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
@@ -60,6 +70,20 @@ body {
   .badge-critical { @apply bg-red-600 text-white border border-red-700 px-2 py-0.5 text-[11px] font-medium uppercase rounded-sm; }
   .badge-moderate { @apply bg-amber-50 text-amber-700 border border-amber-100 px-2 py-0.5 text-[11px] font-medium uppercase rounded-sm; }
   .badge-info { @apply bg-blue-50 text-blue-700 border border-blue-100 px-2 py-0.5 text-[11px] font-medium uppercase rounded-sm; }
+
+  .bg-background {
+    background-color: #f8f9fa !important;
+    background-image: 
+      linear-gradient(135deg, transparent 20%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.8) 50%, transparent 50%),
+      linear-gradient(135deg, transparent 10%, rgba(0, 59, 135, 0.04) 10%, rgba(0, 59, 135, 0.04) 25%, transparent 25%),
+      linear-gradient(135deg, transparent 60%, rgba(255, 127, 0, 0.04) 60%, rgba(255, 127, 0, 0.04) 75%, transparent 75%),
+      linear-gradient(45deg, transparent 30%, rgba(27, 67, 50, 0.03) 30%, rgba(27, 67, 50, 0.03) 45%, transparent 45%),
+      linear-gradient(135deg, transparent 24.9%, rgba(0, 59, 135, 0.1) 24.9%, rgba(0, 59, 135, 0.1) 25.1%, transparent 25.1%),
+      linear-gradient(135deg, transparent 59.9%, rgba(255, 127, 0, 0.1) 59.9%, rgba(255, 127, 0, 0.1) 60.1%, transparent 60.1%) !important;
+    background-size: 2000px 2000px !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+  }
 }
 
 .hero-bg {

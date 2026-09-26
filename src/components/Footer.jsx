@@ -11,7 +11,7 @@ export default function Footer() {
           
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-4">
-              <img src="/assets/images/app_logo.png" alt="Gov Logo" className="w-10 h-10 object-contain brightness-0 invert opacity-90" />
+              <img src="/assets/images/app_logo.png" alt="Gov Logo" className="w-15 h-11 object-contain brightness-0 invert opacity-90" />
               <div className="flex flex-col">
                 <span className="font-bold text-white text-lg leading-tight uppercase tracking-wide">Government of Jharkhand</span>
                 <span className="text-sm text-gray-300">Department of Innovation & IT</span>
